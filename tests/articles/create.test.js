@@ -4,7 +4,7 @@ const app = require('../../app');
 const request = supertest(app);
 const { articleData, Bearer } = require('../data');
 
-describe.skip('test create article', () => {
+describe('test create article', () => {
   describe('test /articles/create', () => {
     test('create article', done => {
       request

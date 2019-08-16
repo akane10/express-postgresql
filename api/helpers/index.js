@@ -17,6 +17,13 @@ function validateEmail(email) {
   return regEx.test(email);
 }
 
+const toObj = (obj, item) => {
+  const [key, val] = item;
+  const x = { ...obj };
+  x[key] = val;
+  return x;
+};
+
 // removeFalsy :: Obj -> Obj
 function removeFalsy(obj) {
   const truthyValue = ([, val]) => val;
