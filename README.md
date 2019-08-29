@@ -39,13 +39,25 @@ This boilerplate is integrated with eslint airbnb-base and prettier and using je
 |-- yarn.lock
 ```
 
-## Command
+## Up and Running
 
-```
-yarn test // run jest test
-yarn dev // run nodemon along with dotenv
-yarn start // run node server
-```
+- create `.env` file
+- run `yarn` or `npm install` (delete `yarn.lock` first)
+- add this to `.env` file
+  ```
+    NODE_ENV=development
+    DBNAME=your_db_name
+    DBUSER=your_db_user
+    DBPASSWORD=your_db_password
+    SECRETKEY=SECRETKEY
+  ```
+- and you're ready to go, run some commands
+
+  ```
+  yarn test // run jest test
+  yarn dev // run nodemon along with dotenv
+  yarn start // run node server
+  ```
 
 ## Depedencies
 
