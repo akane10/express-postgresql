@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const Sequelize = require('sequelize');
 const { dbname, dbuser, dbpassword } = require('./config');
 
@@ -30,4 +31,8 @@ const dbConn = {
   }
 };
 
-module.exports = { db, Sequelize, dbConn };
+module.exports = {
+  db,
+  Sequelize,
+  dbConn
+};

@@ -3,7 +3,7 @@ function removePassword(arg) {
   const v = arg;
   // eslint-disable-next-line func-names
   v.prototype.toJSON = function() {
-    const values = Object.assign({}, this.get());
+    const values = { ...this.get() };
 
     delete values.password;
     return values;
