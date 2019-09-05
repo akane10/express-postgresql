@@ -24,6 +24,12 @@ This boilerplate is integrated with eslint airbnb-base and prettier and using je
 |-- config
     |-- config.js
     |-- db.js
+    |-- dbConfig.js
+|-- db
+    |-- migrations
+        |-- XXXXXXX-some-migration.js
+    |-- seeders
+        |-- XXXXXXX-some-seeder.js
 |-- tests // integration or routes tests
     |-- articles
         |-- create.test.js
