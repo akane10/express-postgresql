@@ -70,7 +70,7 @@ This boilerplate is integrated with eslint airbnb-base and prettier and using je
 
 For more documentation about sequelize [migration](https://sequelize.org/master/manual/migrations.html)
 
-But here is quick start :
+But here is a quick start :
 
 - run `npx sequelize-cli migration:generate --name create-article`
 
@@ -83,14 +83,6 @@ But here is quick start :
 
   module.exports = {
     up: (queryInterface, Sequelize) => {
-      /*
-        Add altering commands here.
-        Return a promise to correctly handle asynchronicity.
-
-        Example:
-        return queryInterface.createTable('users', { id: Sequelize.INTEGER });
-      */
-
       return queryInterface.createTable('articles', {
         id: {
           type: Sequelize.INTEGER,
@@ -118,13 +110,6 @@ But here is quick start :
     },
 
     down: (queryInterface, Sequelize) => {
-      /*
-        Add reverting commands here.
-        Return a promise to correctly handle asynchronicity.
-
-        Example:
-        return queryInterface.dropTable('users');
-      */
       return queryInterface.dropTable('articles');
     }
   };
@@ -141,17 +126,6 @@ But here is quick start :
 
   module.exports = {
     up: (queryInterface, Sequelize) => {
-      /*
-        Add altering commands here.
-        Return a promise to correctly handle asynchronicity.
-
-        Example:
-        return queryInterface.bulkInsert('People', [{
-          name: 'John Doe',
-          isBetaMember: false
-        }], {});
-      */
-
       return queryInterface.bulkInsert(
         'articles',
         [
@@ -170,13 +144,6 @@ But here is quick start :
     },
 
     down: (queryInterface, Sequelize) => {
-      /*
-        Add reverting commands here.
-        Return a promise to correctly handle asynchronicity.
-
-        Example:
-        return queryInterface.bulkDelete('People', null, {});
-      */
       return queryInterface.bulkDelete('articles', null, {});
     }
   };
